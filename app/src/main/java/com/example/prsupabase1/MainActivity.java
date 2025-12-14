@@ -9,8 +9,6 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-import com.example.prsupabase1.TasksAdapter;
-import com.example.prsupabase1.Tasks;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;

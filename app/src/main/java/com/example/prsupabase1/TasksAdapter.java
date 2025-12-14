@@ -29,7 +29,6 @@ public class TasksAdapter extends RecyclerView.Adapter<TasksAdapter.TaskViewHold
         Tasks task = tasks.get(position);
         holder.tvTitle.setText(task.getTitle());
         holder.tvDescription.setText(task.getDescription());
-        holder.checkBoxCompleted.setChecked(task.isCompleted());
 
         // Форматируем дату (убираем лишнюю информацию)
         if (task.getCreatedAt() != null) {
@@ -51,14 +50,12 @@ public class TasksAdapter extends RecyclerView.Adapter<TasksAdapter.TaskViewHold
     public static class TaskViewHolder extends RecyclerView.ViewHolder {
         TextView tvTitle;
         TextView tvDescription;
-        CheckBox checkBoxCompleted;
         TextView tvCreatedAt;
 
         public TaskViewHolder(@NonNull View itemView) {
             super(itemView);
             tvTitle = itemView.findViewById(R.id.tvTitle);
             tvDescription = itemView.findViewById(R.id.tvDescription);
-            checkBoxCompleted = itemView.findViewById(R.id.checkBoxCompleted);
             tvCreatedAt = itemView.findViewById(R.id.tvCreatedAt);
         }
     }
